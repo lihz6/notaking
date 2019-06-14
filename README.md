@@ -4,3 +4,4 @@
 - [Jobs Control](README.d/jobs-control.md) `Control+Z`, `jobs`, `bg`, `&`, `fg`, `disown`, `nohup`
 - [Git 强制推送本地仓库](README.d/git-push-force.md) 本地修改过已推送的提交时，用 `git push -f` 将更新推送到远程
 - [Windows 网页打开本地应用](README.d/windows-webpage-open-application.md) 本地修改过已推送的提交时，用 `git push -f` 将更新推送到远程
+- [Setup wireguard Server and Clients](README.d/setup-wireguard-server-and-clients.md) 本地修改过已推送的提交时，用 `git push -f` 将更新推送到远程
