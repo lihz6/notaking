@@ -104,7 +104,35 @@ EOF
 $ ssh root@$SRVPUB_IP "wg set wg0 peer $(sudo cat publickey) allowed-ips $ADDR4,$ADDR6"
 ```
 
-- Starting Client
+### Starting Client
+
+```bash
+$ wg-quick up wg0
+```
+
+### Shutdown Client
+
+```bash
+$ wg-quick down wg0
+```
+
+### Using Alias
+
+`$HOME/.bash_profile`
+
+```bash
+_wg0() {
+  if ifconfig wg0 &>/dev/null; then
+    export PS1="*$PS1"
+    alias wg0='if wg-quick down wg0 &>/dev/null; then export PS1=${PS1:1}; _wg0; fi'
+  else
+    alias wg0='if wg-quick up wg0 &>/dev/null; then _wg0; fi'
+  fi
+}
+
+_wg0
+```
+
 - Using systemd
 
 ## Client: MacOS 10.14
@@ -119,6 +147,23 @@ brew install wireguard-tools
 - Configuration
 - Add Client to Server
 - Starting Client
+
+### Using Alias
+
+`$HOME/.bash_profile`
+
+```bash
+_wg0() {
+  if ifconfig utun1 &>/dev/null; then
+    export PS1="*$PS1"
+    alias wg0='if wg-quick down wg0 &>/dev/null; then export PS1=${PS1:1}; _wg0; fi'
+  else
+    alias wg0='if wg-quick up wg0 &>/dev/null; then _wg0; fi'
+  fi
+}
+
+_wg0
+```
 
 ## Trouble Shooting
 
