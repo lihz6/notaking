@@ -6,6 +6,6 @@
 
 ```bash
 if [ "$(pwd)" = "$HOME" ]; then
-  cd $(osascript -e 'tell application "Finder"' -e "${1-1} <= (count Finder windows)" -e "get POSIX path of (target of window ${1-1} as alias)" -e 'end tell' 2>/dev/null || echo ~/Documents)
+  cd $(osascript -e 'tell application "Finder"' -e "${1-1} <= (count Finder windows)" -e "get POSIX path of (target of window ${1-1} as alias)" -e 'end tell' &>/dev/null || echo $HOME/Documents)
 fi
 ```
