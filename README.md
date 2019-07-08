@@ -3,6 +3,7 @@
 - [Jobs Control: `jobs`, `bg`, `&`, `fg`, `disown`, `nohup`, `kill`](README.d/jobs-control.md)
 - [`git push -f` 强制推送本地仓库](README.d/git-push-force.md)
 - [Bash 交互式编辑](README.d/bash-interactive-editing.md)
+- [MySQL CLI](README.d/mysql-cli.md)
 
 ## 陈述性知识
 
