@@ -86,3 +86,49 @@ Child.prototype.classMethod = function() {
 <div align="center">
   <img src="RESOURCE/prototype.jpg"/>
 </div>
+
+## Iterable, Iterator, Generator
+
+### Interfaces
+
+```ts
+interface Iterator<T> {
+  next(): { value: T } | { done: true };
+}
+
+interface Iterable<T> {
+  [Symbol.iterator](): Iterator<T>;
+}
+
+interface IterableIterator<T> extends Iterator<T> {
+  [Symbol.iterator](): IterableIterator<T>;
+}
+```
+
+### Syntaxes expecting iterables
+
+- `for(const item of <iterable>) { }`
+- `<iterable>[Symbol.iterator]()`
+- `new Set(<iterable>)`
+- `new Map(<iterable>)`
+- `yield* <iterable>`
+- `[...<iterable>]`
+- `(...<iterable>)`
+
+> Generators are iterators, iterators are iterable.
+
+### User-defined iterables
+
+```js
+const myIterable = {
+  *[Symbol.iterator]() {
+    yield 1;
+    yield 2;
+    yield 3;
+  }
+};
+
+for (let value of myIterable) {
+  console.log(value);
+}
+```
