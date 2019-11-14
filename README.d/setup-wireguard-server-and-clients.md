@@ -166,6 +166,22 @@ _wg0() {
 _wg0
 ```
 
+## Note
+
+```bash
+# 端口转发，服务器中转
+$ iptables -t nat -A PREROUTING -p udp --dport 51xxx -j DNAT --to-destination 149.xxx.xxx.xxx:51xxx
+
+# 经典网络用公网 IP, 专有网络用私网 IP
+$ iptables -t nat -A POSTROUTING -p udp -d 149.xxx.xxx.xxx --dport 51xxx -j SNAT --to-source 39.xxx.xxx.xxx # 公网 IP
+$ iptables -t nat -A POSTROUTING -p udp -d 149.xxx.xxx.xxx --dport 51xxx -j SNAT --to-source 10.xxx.xxx.xxx # 私网 IP
+
+# 保存规则
+$ sudo apt-get install iptables-persistent
+$ sudo netfilter-persistent save
+$ sudo netfilter-persistent reload
+```
+
 ## Trouble Shooting
 
 ##### 1. When `wg-quick up wg0`, `/usr/bin/wg-quick: line 31: resolvconf: command not found`

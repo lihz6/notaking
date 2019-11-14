@@ -27,4 +27,7 @@ $ iptables -A INPUT -p tcp --dport 47 -j ACCEPT
 
 $ iptables -t nat -A POSTROUTING -s 10.10.10.1/24 -o eth0 -j MASQUERADE
 $ iptables -A FORWARD -p tcp --syn -s 10.10.10.1/24 -j TCPMSS --set-mss 1356
+
+$ iptables -t nat -A PREROUTING -p tcp --dport 3128 -j DNAT --to-destination 149.129.98.69:3128
+$ iptables -t nat -A POSTROUTING -j MASQUERADE
 ```

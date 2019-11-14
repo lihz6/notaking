@@ -15,3 +15,7 @@
 - [SSH 远程登录基本配置](README.d/all-about-ssh-remote-logging.md)
 - [`brew`, `npm` 国内源](README.d/all-mirrors-and-sources.md)
 - [Java: How Classes are Found](README.d/java-how-classes-are-found)
+
+## 编程语言
+
+- [JavaScript](README.d/pl-javascript.md)
