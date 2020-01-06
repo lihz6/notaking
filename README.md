@@ -13,7 +13,7 @@
 - [办公室旧电脑安装 Ubuntu Server 19.04](README.d/ubuntu-server-19.04-on-old-pc.md)
 - [Ubuntu PPTP VPN Server](README.d/ubuntu-pptp-server.md)
 - [SSH 远程登录基本配置](README.d/all-about-ssh-remote-logging.md)
-- [`brew`, `npm` 国内源](README.d/all-mirrors-and-sources.md)
+- [`brew`, `npm` 等国内源及代理](README.d/all-mirrors-and-sources.md)
 - [Java: How Classes are Found](README.d/java-how-classes-are-found)
 
 ## 编程语言

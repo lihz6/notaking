@@ -30,3 +30,14 @@ npm --registry https://registry.npm.taobao.org install express
 npm config set registry https://registry.npm.taobao.org
 npm config get registry
 ```
+
+### Proxy
+
+`~/.bashrc`
+
+```bash
+export http_proxy=http://<username>:<password>@<domain>:<port>
+# same as http_proxy
+export https_proxy=http://<username>:<password>@<domain>:<port>
+export no_proxy=$(printf %s, {0..9}).local,localhost
+```
