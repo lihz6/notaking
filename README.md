@@ -1,7 +1,7 @@
 ## 程序性知识
 
 - [Jobs Control: `jobs`, `bg`, `&`, `fg`, `disown`, `nohup`, `kill`](README.d/jobs-control.md)
-- [`git push -f` 强制推送本地仓库](README.d/git-push-force.md)
+- [Git 必知必会](README.d/git.md)
 - [Bash 交互式编辑](README.d/bash-interactive-editing.md)
 - [MySQL CLI](README.d/mysql-cli.md)
 
