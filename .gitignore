@@ -1,3 +1,4 @@
 .*
-/index.*
-!.gitignore
+/*
+!README.md
+!README.d
