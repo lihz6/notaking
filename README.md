@@ -1,7 +1,7 @@
 ## DevOps
 
 - [Jobs Control: `jobs`, `bg`, `&`, `fg`, `disown`, `nohup`, `kill`](README.d/jobs-control.md)
-- [Git 必知必会](README.d/git.md)
+- [Git 必知必会](https://github.com/ngolin/git-flow-in-practice/blob/master/README.md)
 - [Bash 交互式编辑](README.d/bash-interactive-editing.md)
 - [MySQL CLI](README.d/mysql-cli.md)
 - [Java: How Classes are Found](README.d/java-how-classes-are-found)
