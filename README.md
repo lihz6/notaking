@@ -5,6 +5,7 @@
 - [Bash 交互式编辑](README.d/bash-interactive-editing.md)
 - [MySQL CLI](README.d/mysql-cli.md)
 - [Java: How Classes are Found](README.d/java-how-classes-are-found)
+- [C/C++ Checklist](README.d/c-cpp-checklist.md)
 - [简单事简单做](README.d/keep-simple-things-single.md)
 
 ## Config
